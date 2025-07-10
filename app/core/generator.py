@@ -25,19 +25,24 @@ def generate_nudge(deal_id: str, contact: str, tone: str, reply_speed: float, de
         return f"Hi {contact}, shall we reconnect on the {deal_name} {stage.lower()}? Please suggest a time."
     
     system_prompt = (
-            "You are a smart sales assistant helping a salesperson revive a stalled deal. "
-            "Generate a clear, concise, and polite nudge message (no more than 25 words) "
-            "to send to the contact. Tailor the message to the buyer’s communication tone "
-            "and reply speed, referencing the deal stage. Avoid generic phrases and encourage a next step."
-        )
-    user_prompt = (
-            f"Deal Name: {deal_name}\n"
-            f"Stage: {stage}\n"
-            f"Contact Name: {contact}\n"
-            f"Buyer Tone: {tone}\n"
-            f"Buyer Reply Speed: {reply_speed:.0f} minutes\n\n"
-            "Please write a polite, concise nudge message to re-engage the contact and move the deal forward."
+        "You're a smart sales assistant writing Slack-style nudges to help a salesperson revive stalled B2B deals."
+        "Your job is to suggest the next best step to revive a stalled deal by suggesting an action message. "
+        "Keep the output concise, actionable, and tailored . "
+        "Always write in under 25 words. Avoid greetings, fluff, or full emails. "
+        "Just suggest the next step like a sales note Slack message."
+        "Reference the deal stage, propose a specific next step, and avoid generic phrases like 'follow up' or 'checking in'."
     )
+
+    user_prompt = (
+        f"Deal: {deal_name}\n"
+        f"Stage: {stage}\n"
+        f"Contact: {contact}\n"
+        f"Buyer Tone: {tone}\n"
+        f"Buyer Reply Speed: {reply_speed:.0f} minutes\n\n"
+        "Write a short, polite nedge message (UNDER 25 WORDS) to re-engage the contact and move the deal forward."
+        "referencing the deal stage, and proposing a clear next step."
+    )
+
 
     try:
         response = client.chat.completions.create(
