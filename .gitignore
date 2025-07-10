@@ -1,0 +1,49 @@
+# Byte-compiled / cache files
+__pycache__/
+*.py[cod]
+*.so
+*.pyd
+*.pyo
+
+# Virtual environments
+venv/
+env/
+.venv/
+.env/
+# Environment variables
+.env
+.env.*
+
+# Output directory
+out/
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+
+# IDEs
+.vscode/
+.idea/
+# Pytest cache
+.pytest_cache/
+
+# MyPy, Coverage, etc.
+.mypy_cache/
+coverage.xml
+.coverage
+.cache/
+
+# Logs
+*.log
+
+# Docker
+*.tar
+*.img
+*.pid
+
+# Requirements lock
+poetry.lock
+Pipfile.lock
