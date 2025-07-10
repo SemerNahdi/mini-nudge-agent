@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mini-nudge-agent"
+version = "0.1.0"
+description = "A micro-service to detect stalled sales deals and suggest personalized nudges."
+authors = [{ name = "Semer Nahdi", email = "semernahdi25@gmail.com" }]
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "pandas==2.2.2",
+    "openai==1.35.7",
+    "fastapi==0.111.0",
+    "uvicorn==0.30.1",
+    "python-dotenv==1.0.1",
+    "pydantic==2.8.2",
+    "pytest==7.4.0",
+    "typing-extensions>=4.0.0"
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest==7.4.0"
+]
+
+[project.scripts]
+run-app = "app.run:main"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = "test_*.py"
+addopts = "-v"
+
+[tool.setuptools]
+packages = ["app", "app.core", "app.api", "app.utils"]
