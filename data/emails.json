@@ -1,0 +1,45 @@
+[
+  {
+    "deal_id": "OPP-123",
+    "thread": [
+      {
+        "from": "ae@nudge.ai",
+        "to": "marie.cfo@acme.com",
+        "ts": "2025-06-18T09:00:00Z"
+      },
+      {
+        "from": "marie.cfo@acme.com",
+        "to": "ae@nudge.ai",
+        "ts": "2025-06-18T09:45:00Z",
+        "body": "Thanks. Could you share ROI table?"
+      },
+      {
+        "from": "ae@nudge.ai",
+        "to": "marie.cfo@acme.com",
+        "ts": "2025-06-19T08:10:00Z"
+      },
+      {
+        "from": "marie.cfo@acme.com",
+        "to": "ae@nudge.ai",
+        "ts": "2025-06-19T08:55:00Z",
+        "body": "Looks good\u2014need pricing doc."
+      }
+    ]
+  },
+  {
+    "deal_id": "OPP-125",
+    "thread": [
+      {
+        "from": "ae@nudge.ai",
+        "to": "bob@globex.com",
+        "ts": "2025-06-10T11:00:00Z"
+      },
+      {
+        "from": "bob@globex.com",
+        "to": "ae@nudge.ai",
+        "ts": "2025-06-12T14:30:00Z",
+        "body": "Let\u2019s regroup next month \ud83d\ude09"
+      }
+    ]
+  }
+]
