@@ -27,10 +27,9 @@ def generate_nudge(deal_id: str, contact: str, tone: str, reply_speed: float, de
     system_prompt = (
         "You're a smart sales assistant writing Slack-style nudges to help a salesperson revive stalled B2B deals."
         "Your job is to suggest the next best step to revive a stalled deal by suggesting an action message. "
-        "Keep the output concise, actionable, and tailored . "
-        "Always write in under 25 words. Avoid greetings, fluff, or full emails. "
-        "Just suggest the next step like a sales note Slack message."
-        "Reference the deal stage, propose a specific next step, and avoid generic phrases like 'follow up' or 'checking in'."
+        "Always write in UNDER 25 WORDS. Avoid greetings, fluff, or full emails. "
+        "Just suggest the next step for a sales note Slack message."
+        "Reference the deal stage, propose a specific next step, and avoid generic phrases like 'follow up' or 'checking in' and NO PREAMBLE."
     )
 
     user_prompt = (
