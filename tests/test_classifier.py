@@ -56,7 +56,7 @@ def test_detect_tone_long_text(mock_classifier):
 def test_detect_tone_emoji_edge_cases():
     """Test tone detection with edge-case emoji scenarios in fallback."""
     # Exactly 2 emojis
-    assert detect_tone("Hi 😊😉") == "casual"
+    assert detect_tone("Hi 😊😉" , clf=None) == "casual"
     # 1 emoji (not enough)
     assert detect_tone("Hi 😊") == "formal"
     # Mixed emoji and text
