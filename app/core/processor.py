@@ -85,7 +85,7 @@ def process_deals(today: datetime = datetime.now(timezone.utc)) -> List[Nudge]:
             continue
         
         reply_speed = calculate_reply_speed(valid_thread, your_email, contact)
-        tone = detect_tone(valid_thread[-1].get('body', '')) if valid_thread else "formal"
+        tone = detect_tone(valid_thread[-1].get('body', '') , clf=None) if valid_thread else "formal"
         nudge_text = generate_nudge(deal_id, contact, tone, reply_speed, row['deal_name'], row['stage'])
         
         nudges.append(Nudge(
