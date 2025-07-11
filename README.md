@@ -106,8 +106,6 @@ run-app
 ✅ Generated nudges, saved to out/nudges.json
 ```
 
-Here's a cleaned-up and formatted version of your Swagger section in Markdown:
-
 ---
 
 ### Run FastAPI Server
@@ -150,8 +148,6 @@ A JSON array of nudge objects, each containing:
 * `tone` (string, e.g. "formal" or "casual")
 
 ---
-
-Would you like me to add example JSON output for `/nudges` too?
 
 ### Run Tests
 
